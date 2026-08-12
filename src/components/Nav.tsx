@@ -58,7 +58,7 @@ export default function Nav() {
   }, [active]);
 
   return (
-    <nav className="fixed left-1/2 top-4 z-40 w-[calc(100%-2rem)] max-w-fit -translate-x-1/2">
+    <nav className="fixed left-1/2 top-[calc(1rem+env(safe-area-inset-top))] z-40 w-[calc(100%-2rem-env(safe-area-inset-left)-env(safe-area-inset-right))] max-w-fit -translate-x-1/2">
       <div className="flex items-center gap-1 overflow-x-auto rounded-full border border-hairline/70 bg-paper/70 px-2 py-2 shadow-[0_1px_2px_rgba(36,28,20,0.06),inset_0_1px_0_rgba(255,255,255,0.6)] backdrop-blur-xl backdrop-saturate-150 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         {sections.map((s) => (
           <a

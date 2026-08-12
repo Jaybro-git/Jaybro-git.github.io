@@ -24,8 +24,7 @@ export const person = {
 };
 
 export const about =
-  "3rd-year Computer Science and Engineering undergraduate at the University of Moratuwa, specializing in Data Science and Engineering. Focused on forecasting, explainable AI, and full-stack systems, with research accepted at MERCon 2026 and hands-on work spanning machine learning, infrastructure, and product engineering.";
-
+  "I am a third-year Computer Science and Engineering honors student at the University of Moratuwa, specializing in Data Science and Engineering. Driven by a profound interest in academic research and intelligent system design, I have maintained a rigorous academic record and am a consistent high-achiever on the Dean's List. My practical experience bridges the gap between theoretical research and scalable enterprise solutions by integrating machine learning architectures and explainable artificial intelligence with full-stack development and DevOps practices. Whether I am building robust digital platforms, advancing transparent AI methodologies, or navigating high-stakes global programming competitions, I am passionate about engineering end-to-end solutions for complex real-world challenges."
 export const education: Entry[] = [
   {
     title: "University of Moratuwa",

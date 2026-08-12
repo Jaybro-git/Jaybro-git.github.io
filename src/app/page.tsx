@@ -27,6 +27,28 @@ export default function Home() {
           <p className="text-sm leading-relaxed text-ink-secondary">
             {about}
           </p>
+          <a
+            href="/JanithM_CV.pdf"
+            download
+            className="mt-4 inline-flex items-center gap-1.5 text-xs font-medium uppercase tracking-wide text-accent underline decoration-accent/30 underline-offset-4 transition-colors duration-200 hover:text-ink hover:decoration-ink"
+          >
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 16 16"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M8 2v8M8 10l-3.5-3.5M8 10l3.5-3.5M3 13.5h10"
+                stroke="currentColor"
+                strokeWidth="1.4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            Download CV
+          </a>
         </section>
 
         <section id="education" className="border-t border-hairline py-14">
@@ -94,7 +116,7 @@ export default function Home() {
 
         <footer className="border-t border-hairline py-10">
           <p className="text-xs text-ink-tertiary">
-            {person.name} · Built with Next.js
+            {person.name} · Portfolio
           </p>
         </footer>
       </main>
