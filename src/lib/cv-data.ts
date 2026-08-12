@@ -1,12 +1,16 @@
 export type Link = { label: string; href: string };
 
+export type BulletItem =
+  | string
+  | { text: string; emphasis?: boolean; items?: string[] };
+
 export type Entry = {
   title: string;
   meta?: string; // right-aligned date/place
   subtitle?: string;
   subtitleRight?: string;
   links?: Link[];
-  bullets: string[];
+  bullets: BulletItem[];
 };
 
 export const person = {
@@ -32,9 +36,17 @@ export const education: Entry[] = [
     subtitle: "B.Sc Engineering (Hons), Computer Science and Engineering",
     subtitleRight: "Moratuwa, Sri Lanka",
     bullets: [
-      "CGPA: 3.95 / 4.00",
+      { text: "CGPA: 3.95 / 4.00", emphasis: true },
       "Stream: Data Science and Engineering",
-      "Dean's List, SGPA Sem 1: 4.00 · Sem 2: 4.00 · Sem 3: 3.92 · Sem 4: 3.91",
+      {
+        text: "Dean's List (SGPA)",
+        items: [
+          "Semester 1 - 4.00",
+          "Semester 2 - 4.00",
+          "Semester 3 - 3.92",
+          "Semester 4 - 3.91",
+        ],
+      },
     ],
   },
   {
@@ -60,8 +72,8 @@ export const research: Entry[] = [
       },
     ],
     bullets: [
-      'Researched "The Effect of Search Intent Data on Predicting Post-Crisis Daily Tourist Arrivals in Sri Lanka," building a multi-model forecasting framework (SARIMA, SARIMAX, XGBoost, Random Forest, LSTM, SVR, Sequential Hybrid) integrating official arrivals with Yandex search queries, Google Trends, exchange rates, and weather data.',
-      "Benchmarked forecasting architectures and conducted feature engineering and explainability analysis, achieving a rolling MAPE of 8.94% with an RBF-SVM model.",
+      "Sri Lanka's tourism sector has had to rebuild forecasting trust after repeated shocks (the Easter Sunday attacks, COVID-19); this work asks whether real-time search behavior can shorten that recovery gap. Built a multi-model framework (SARIMA, SARIMAX, XGBoost, Random Forest, LSTM, SVR, and a sequential hybrid) fusing official daily arrivals with Yandex search queries, Google Trends interest, exchange rates, and weather data.",
+      "Benchmarked all seven architectures with dedicated feature engineering and explainability analysis to see which signals actually drove predictions, not just which model scored best. The RBF-SVM configuration led, reaching a rolling MAPE of 8.94%.",
     ],
   },
   {
@@ -78,8 +90,8 @@ export const research: Entry[] = [
       },
     ],
     bullets: [
-      "Compared filter, wrapper, embedded, and hybrid feature selection methods on the high-dimensional Madelon dataset from the NIPS 2003 Feature Selection Challenge.",
-      "Implemented and benchmarked selection pipelines that improved balanced accuracy from 0.58 (baseline, all features) to 0.89 using a hybrid approach.",
+      "Ran a controlled comparison of filter (ANOVA), wrapper (recursive feature elimination), embedded (Random Forest / XGBoost importance), and hybrid selection pipelines on Madelon, a dataset purpose-built for the NIPS 2003 challenge to punish methods that can't separate 5 informative features from 15 redundant and 480 pure-noise ones.",
+      "Held the downstream evaluator (RBF-SVM) constant across all four families for a fair comparison. Selection quality followed a clear hierarchy, hybrid > embedded > wrapper > filter > no selection, with the best hybrid pipeline lifting balanced accuracy from 0.58 (all 500 features) to 0.89 and reaching 0.97 AUC-ROC.",
     ],
   },
 ];
@@ -91,8 +103,8 @@ export const projects: Entry[] = [
     links: [{ label: "GitHub", href: "https://github.com/ECHO-Lit/ECHO-LIT" }],
     bullets: [
       "Tech: Next.js, FastAPI, Celery, Redis, Docker, PyTorch, Hugging Face Transformers.",
-      "A research workbench for explainable AI in speech recognition (Whisper, Wav2Vec2): saliency and attention-based attribution, perturbation-driven robustness testing, layer-wise representation probing, internal activation and Jacobian-based sensitivity analysis, Whisper hallucination detection, and linguistic-vs-acoustic influence and accent/language fairness analysis, all served through an asynchronous, containerized Celery/Redis job architecture.",
-      "Researchers can upload custom speech models and datasets to inspect the blackbox end-to-end: tracing a bad prediction back to the exact audio evidence or acoustic condition that caused it.",
+      "An interpretability workbench for speech models (Whisper, Wav2Vec2) that fills a gap general tools like Google's Learning Interpretability Tool leave for audio: saliency and attention-based attribution, layer-wise representation probing, Jacobian-based sensitivity analysis, perturbation-driven robustness testing, Whisper hallucination detection, and accent/language fairness analysis.",
+      "Researchers upload their own models and datasets and trace a bad prediction back to the exact audio evidence or acoustic condition behind it. Heavy analysis jobs run asynchronously through a Celery/Redis queue behind a FastAPI control plane, decoupled from the Next.js frontend so long-running inference never blocks the UI, with multi-GPU support (CUDA, ROCm, Metal) across whatever hardware a researcher has.",
     ],
   },
   {
@@ -103,8 +115,8 @@ export const projects: Entry[] = [
     ],
     bullets: [
       "Tech: GitOps via ArgoCD, Kafka/EMQX event streaming, Kong API gateway, Keycloak/Vault identity & secrets, Prometheus/Grafana monitoring, Hyperledger Fabric ledger for tamper-proof records.",
-      "An IoT-integrated platform to monitor real-time waste levels and optimize collection routes across edge, IoT, mobile, and analytics components.",
-      "Worked in the DevOps and Platform Infrastructure team.",
+      "An IoT-to-insight pipeline for municipal waste collection: bin-level sensors feed an edge layer for local processing, sensor data streams through Kafka/EMQX into a GitOps-deployed platform, and a Hyperledger Fabric ledger keeps collection records tamper-proof for audit, across four repos spanning edge, IoT firmware, mobile, and a routing simulator.",
+      "Worked in the DevOps and Platform Infrastructure team, standing up the deployment and monitoring backbone (ArgoCD, Kong, Keycloak/Vault, Prometheus/Grafana) the rest of the system runs on.",
     ],
   },
   {
@@ -118,8 +130,9 @@ export const projects: Entry[] = [
     ],
     bullets: [
       "Tech: FastAPI, Next.js, SQLAlchemy, MySQL, XGBoost, OR-Tools, LangGraph, LangSmith, Chroma, Gemini, Sentence-Transformers.",
-      "A pharmaceutical distribution planning platform consolidating shortage forecasting, shipment prioritization, dispatch planning, and execution tracking into a single planner workflow.",
-      "Built the ML module: priority-scoring for inbound manifest clearance, an XGBoost 48-hour shortage forecasting model, and an OR-Tools dispatch optimizer, plus a multi-agent RAG chatbot (LangGraph supervisor routing to knowledge, operations, and analytics agents over Chroma) for conversational querying of policies, stock, forecasts, and dispatch plans.",
+      "Planners previously tracked pharmaceutical distribution across spreadsheets, juggling DC replenishment speed, simultaneous vessel manifests, cold-chain constraints, lorry capacity, and day-level availability by hand. This platform folds shortage forecasting, shipment prioritization, dispatch planning, and execution tracking into one console.",
+      "The core design choice: planning state never directly mutates physical stock. Approvals create scoped reservations and in-transit transfers, and real inventory only changes through explicit business events, keeping the system auditable end-to-end.",
+      "Built the ML and optimization core: an XGBoost model forecasting 48-hour shortage pressure, a priority scorer for inbound manifest clearance, an OR-Tools dispatch optimizer, and a multi-agent RAG chatbot (LangGraph supervisor routing to knowledge, operations, and analytics agents over a Chroma vector store) for querying policy, live stock, forecasts, and dispatch plans conversationally.",
     ],
   },
   {
@@ -128,7 +141,8 @@ export const projects: Entry[] = [
     links: [{ label: "GitHub", href: "https://github.com/Jaybro-git/RPAL" }],
     bullets: [
       "Tech: Java.",
-      "Built a complete interpreter for RPAL, a functional programming language: lexing, recursive-descent parsing, AST standardization, and evaluation via a Control/Stack/Environment (CSE) machine, without external lexer/parser generators, supporting closures, recursion, tuples, and built-in operators.",
+      "A from-scratch interpreter for RPAL, a lazy functional language, built without lex/yacc or any parser generator: a hand-written lexer, a recursive-descent parser producing an AST, a standardizer that rewrites language constructs down to lambda-calculus primitives, and a Control/Stack/Environment machine that evaluates the result.",
+      "Recursion is call-by-value through a Y*-style fixed-point combinator that wraps functions in eta closures so they can reference themselves. The runtime handles closures, tuples, and 14 built-in operators end-to-end, verified against 17 test programs from Fibonacci to simultaneous bindings.",
     ],
   },
   {
@@ -142,8 +156,8 @@ export const projects: Entry[] = [
     ],
     bullets: [
       "Tech: Next.js, Express.js, Neon Postgres, Docker.",
-      "A digital banking platform for a microfinance institution: savings accounts, fixed deposits, automated interest accrual, and real-time transaction processing across multiple account tiers.",
-      "Contributed to full-stack development and a CI/CD workflow automating build verification and unit testing.",
+      "A digital core-banking platform modeled on a Sri Lankan microfinance bank serving rural communities: customer onboarding and agent assignment across branches, tiered-interest savings accounts, fixed deposits across 6-month, 1-year, and 3-year terms, joint accounts, and monthly interest auto-crediting with full transaction audit trails.",
+      "Enforces real banking constraints rather than happy-path CRUD: minimum balances, no overdrafts, one fixed deposit per savings account, and role-based access separating customers, agents, and branch managers. Contributed to the full-stack build and a CI/CD pipeline automating build verification and unit testing.",
     ],
   },
   {
@@ -157,7 +171,8 @@ export const projects: Entry[] = [
     ],
     bullets: [
       "Tech: VHDL, Xilinx Vivado, FPGA.",
-      "Designed a custom 12-bit nanoprocessor: ALU, register bank, instruction decoder, verifying functionality through simulation and hardware synthesis.",
+      "Designed a processor from the gate level up in VHDL, an ALU, register bank, and instruction decoder, iterated across three passes: a basic 4-bit build, an optimized revision, then an extended 12-bit version, rather than a single one-shot design.",
+      "Verified functionality through simulation and synthesis in Xilinx Vivado, targeting integration into larger FPGA projects.",
     ],
   },
 ];

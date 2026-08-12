@@ -42,15 +42,39 @@ export default function EntryBlock({ entry }: { entry: Entry }) {
       )}
 
       <ul className="mt-2.5 space-y-1.5">
-        {entry.bullets.map((b, i) => (
-          <li
-            key={i}
-            className="flex gap-2.5 text-sm leading-relaxed text-ink-secondary"
-          >
-            <span className="mt-[0.55em] h-[3px] w-[3px] shrink-0 rounded-full bg-accent/60" />
-            <span>{b}</span>
-          </li>
-        ))}
+        {entry.bullets.map((b, i) => {
+          const item = typeof b === "string" ? { text: b } : b;
+          return (
+            <li
+              key={i}
+              className="flex gap-2.5 text-sm leading-relaxed text-ink-secondary"
+            >
+              <span className="mt-[0.55em] h-[3px] w-[3px] shrink-0 rounded-full bg-accent/60" />
+              <div>
+                <span
+                  className={
+                    item.emphasis ? "font-semibold text-ink" : undefined
+                  }
+                >
+                  {item.text}
+                </span>
+                {item.items && item.items.length > 0 && (
+                  <ul className="mt-1.5 space-y-1 border-l border-hairline pl-3">
+                    {item.items.map((sub, j) => (
+                      <li
+                        key={j}
+                        className="flex gap-2 text-sm leading-relaxed text-ink-tertiary"
+                      >
+                        <span className="mt-[0.5em] h-[3px] w-[3px] shrink-0 rounded-full bg-ink-tertiary/50" />
+                        <span>{sub}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
