@@ -25,7 +25,7 @@ export default function Nav() {
         return;
       }
 
-      let current = sections[0].id;
+      let current: string = sections[0].id;
       for (let i = 0; i < els.length; i++) {
         if (els[i].offsetTop <= triggerLine) {
           current = sections[i].id;
