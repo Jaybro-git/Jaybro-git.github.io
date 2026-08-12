@@ -1,0 +1,200 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[left=0.75in,right=0.75in,top=0.75in,bottom=0.75in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+% Formatting sections
+\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{1.5ex plus 1ex minus .2ex}{1ex plus .2ex}
+
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+    \textbf{\Huge Janith Chathuranga Mahanama} \\ \vspace{5pt}
+    \small +94 767060599 $|$ \href{mailto:janithm.23@cse.mrt.ac.lk}{\underline{janithm.23@cse.mrt.ac.lk}} $|$ \href{https://github.com/Jaybro-git}{\underline{GitHub}} $|$ \href{https://www.linkedin.com/in/janith-mahanama-5b01aa315}{\underline{LinkedIn}}
+\end{center}
+
+\section{Education}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    
+    \resumeSubheading
+      {University of Moratuwa}{2024 -- Present}
+      {B.Sc Engineering (Hons) Computer Science and Engineering}{Moratuwa, Sri Lanka}
+      \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
+        \resumeItem{\textbf{CGPA:} 3.95 / 4.00}
+        \resumeItem{\textbf{Stream:} Data Science and Engineering}
+        \resumeItem{\textbf{Dean's List:} SGPA - Semester 1: 4.00 $|$ Semester 2: 4.00 $|$ Semester 3: 3.92 $|$ Semester 4: 3.91}
+      \end{itemize}
+
+    \resumeSubheading
+      {Trinity College Kandy}{2009 -- 2023}
+      {Primary and Secondary Education}{Kandy, Sri Lanka}
+      \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
+        \resumeItem{\textbf{GCE Advanced Level (Physical Science Stream) -- 2022/23:}}
+        \begin{itemize}
+            \item \small{Z Score: 2.6570 $|$ District Rank: 10 $|$ Island Rank: 106}
+        \end{itemize}
+        \resumeItem{\textbf{GCE Ordinary Level -- 2019:} 8 A's, 1 B}
+      \end{itemize}
+      
+\end{itemize}
+
+\section{Research Experience}
+\begin{itemize}[leftmargin=0.15in, label={}]
+
+    \resumeProjectHeading
+      {Predicting Post-Crisis Daily Tourist Arrivals $|$ \href{https://cdn.jsdelivr.net/gh/Jaybro-git/Research-Papers@main/Search_Intent_Effect_on_Post_Crisis_Daily_Tourist_Arrival_Prediction_for_Sri_Lanka.pdf}{\underline{Paper}}}{Accepted -- MERCon 2026}
+      \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
+        \resumeItem{Researched \textit{"The Effect of Search Intent Data on Predicting Post-Crisis Daily Tourist Arrivals in Sri Lanka"}, building a multi-model forecasting framework (SARIMA, SARIMAX, XGBoost, Random Forest, LSTM, SVR, Sequential Hybrid) that integrates official arrivals with Yandex search queries, Google Trends, exchange rates, and weather data. Benchmarked forecasting architectures and conducted feature engineering and explainability analysis, achieving a rolling MAPE of 8.94\% with an RBF-SVM model.}
+      \end{itemize}
+
+    \resumeProjectHeading
+      {Feature Selection Research (NIPS 2003) $|$ \href{https://github.com/Jaybro-git/Feature-Selection-Research-NIPS-2003}{\underline{GitHub}} $|$ \href{https://cdn.jsdelivr.net/gh/Jaybro-git/Research-Papers@main/Feature_Selection_for_High_Dimensional_Noisy_Data_Research_Paper.pdf}{\underline{Paper}}}{Not Published}
+      \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
+        \resumeItem{Compared filter, wrapper, embedded, and hybrid feature selection methods on the high-dimensional Madelon dataset from the NIPS 2003 Feature Selection Challenge, implementing and benchmarking selection pipelines that improved balanced accuracy from 0.58 (baseline, all features) to 0.89 using a hybrid approach.}
+      \end{itemize}
+
+\end{itemize}
+\section{Projects}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeProjectHeading
+      {AudioLens - Explainable AI Research Workbench for Speech Models  $|$ \href{https://github.com/ECHO-Lit/ECHO-LIT}{\underline{GitHub}}}{Ongoing}
+      \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
+        \resumeItem{\textbf{Tech Stack:} Next.js, FastAPI, Celery, Redis, Docker, PyTorch, Hugging Face Transformers.}
+        \resumeItem{A research workbench for explainable AI in speech recognition (Whisper, Wav2Vec2): saliency and attention-based attribution, perturbation-driven robustness testing, layer-wise representation probing, internal activation and Jacobian-based sensitivity analysis, Whisper hallucination detection, and linguistic-vs-acoustic influence and accent/language fairness analysis, all served through an asynchronous, containerized Celery/Redis job architecture.}
+        \resumeItem{Users/researchers can upload custom speech models and datasets to inspect the blackbox architecture end-to-end: tracing a bad prediction back to the exact audio evidence or acoustic condition that caused it.}
+      \end{itemize}
+    \resumeProjectHeading
+      {Smart Waste Management System  $|$ \href{https://github.com/UOM-CSE-Sem4-GroupF}{\underline{GitHub}}}{2026}
+      \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
+        \resumeItem{\textbf{Tech Stack:} GitOps deployment via ArgoCD, Kafka/EMQX event streaming, Kong API gateway, Keycloak/Vault-based identity and secrets management, Prometheus and Grafana for monitoring, and a Hyperledger Fabric ledger for tamper-proof collection records.}
+        \resumeItem{An IoT-integrated platform to monitor real-time waste levels and optimize collection routes across edge, IoT, mobile, and analytics components.}
+        \resumeItem{Worked in the DevOps and Platform Infrastructure team.}
+      \end{itemize}
+    \resumeProjectHeading
+      {Pharma Availability Control Tower  $|$ \href{https://github.com/JPabasara/pharma-availability-control-tower}{\underline{GitHub}}}{2026}
+      \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
+        \resumeItem{\textbf{Tech Stack:} FastAPI, Next.js, SQLAlchemy, MySQL, XGBoost, OR-Tools, LangGraph, LangSmith, Chroma, Gemini, Sentence-Transformers.}
+        \resumeItem{A pharmaceutical distribution planning platform consolidating shortage forecasting, shipment prioritization, dispatch planning, and execution tracking into a single planner workflow.}
+        \resumeItem{Implemented the Machine Learning module (a priority-scoring model for inbound manifest clearance, an XGBoost-based 48-hour shortage forecasting model, and an OR-Tools dispatch optimization engine) and a multi-agent RAG chatbot (LangGraph supervisor routing to knowledge, operations, and analytics agents over a Chroma vector store) for conversational querying of policies, live stock, forecasts, and dispatch plans.}
+      \end{itemize}
+    \resumeProjectHeading
+      {RPAL Interpreter  $|$ \href{https://github.com/Jaybro-git/RPAL}{\underline{GitHub}}}{2026}
+      \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
+        \resumeItem{\textbf{Tech Stack:} Java.}
+        \resumeItem{Built a complete interpreter for RPAL, a functional programming language, implementing lexing, recursive-descent parsing, AST standardization, and evaluation via a Control/Stack/Environment (CSE) machine, without external lexer/parser generators, supporting closures, recursion, tuples, and built-in operators.}
+      \end{itemize}
+    \resumeProjectHeading
+      {Banking Management System  $|$ \href{https://github.com/Jaybro-git/Banking-Management-System.git}{\underline{GitHub}}}{2025}
+      \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
+        \resumeItem{\textbf{Tech Stack:} Next.js, Express.js, Neon Postgres, Docker.}
+        \resumeItem{A digital banking platform for a microfinance institution, supporting savings accounts, fixed deposits, automated interest accrual, and real-time transaction processing across multiple account tiers.}
+        \resumeItem{Contributed to full-stack development and CI/CD workflow automating build verification and unit testing.}
+      \end{itemize}
+      \resumeProjectHeading
+      {12-bit Nanoprocessor  $|$ \href{https://github.com/Jaybro-git/Nanoprocessor.git}{\underline{GitHub}}}{2025}
+      \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
+        \resumeItem{\textbf{Tech Stack:} VHDL, Xilinx Vivado, FPGA.}
+        \resumeItem{Designed a custom 12-bit nanoprocessor architecture featuring an Arithmetic Logic Unit (ALU), register bank, and instruction decoder, verifying system functionality through simulation and hardware synthesis.}
+      \end{itemize}
+\end{itemize}
+
+\section{Competitions}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeProjectHeading
+      {AITHON 2026 by Hemas Holdings PLC}{2026}
+      \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
+        \resumeItem{\textbf{Top 10 Finalist}.}
+      \end{itemize}
+
+    \resumeProjectHeading
+      {IEEEXtreme 19.0 Programming Competition}{2025}
+      \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
+        \resumeItem{\textbf{Global Rank 51}.}
+      \end{itemize}
+
+    \resumeProjectHeading
+      {Coderally 6.0 (Hackathon by IEEE Computer Society of IIT)}{2025}
+      \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
+        \resumeItem{\textbf{4th Place} (Advanced Tier).}
+      \end{itemize}
+
+    \resumeProjectHeading
+      {CodeArena (Coding Competition by IET on Campus KDU)}{2025}
+      \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
+        \resumeItem{\textbf{4th Place} (Finalist).}
+      \end{itemize}
+
+    \resumeProjectHeading
+      {Devthon 2.0 (Web App Development Competition)}{2025}
+      \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
+        \resumeItem{\textbf{Semi-Finalist} with \textit{Safe Steps: Women Safety Website}.}
+      \end{itemize}
+\end{itemize}
+
+\section{Certifications}
+\begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
+    \resumeItem{\textbf{AWS Academy Graduate} -- Cloud Foundations}
+    \resumeItem{\textbf{AWS Academy Graduate} -- Microservices and CI/CD Pipeline Builder}
+    \resumeItem{\textbf{Machine Learning Specialization} -- Coursera [Ongoing]}
+    \resumeItem{\textbf{Python Programming Online Course} -- University of Moratuwa}
+    \resumeItem{\textbf{Web Development Online Course} -- University of Moratuwa}
+    \resumeItem{\textbf{Level 3 Certificate in Information Technology} -- School of Computing, Esoft Metro Campus}
+\end{itemize}
+
+\section{Experience \& Extracurriculars}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeProjectHeading
+      {University of Moratuwa}{2024 -- Present}
+      \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
+        \resumeItem{Member of IEEE Student Branch and IESL.}
+        \resumeItem{Member of Strategic Events Committee, Computer Science \& Engineering Student Society.}
+        \resumeItem{Member of Publicity Committee for SLIoT 2026.}
+      \end{itemize}
+
+    \resumeProjectHeading
+      {Trinity College Kandy}{2009 -- 2023}
+      \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
+        \resumeItem{Teaching Assistant for Advanced Level Section (2023).}
+        \resumeItem{Committee Member: Social Service Union (2019), Science Society (2015, 2017).}
+        \resumeItem{Member: Astronomical Society, Automotive Club, Design Club.}
+        \resumeItem{Member of the School Hockey Team (2013-2014, 2016-2017).}
+      \end{itemize}
+\end{itemize}
+
+\section{References}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeProjectHeading
+      {Prof. Dulani Meedeniya}{Professor}
+      \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
+        \resumeItem{Department of Computer Science \& Engineering, University of Moratuwa}
+        \resumeItem{\href{mailto:dulanim@cse.mrt.ac.lk}{\underline{dulanim@cse.mrt.ac.lk}}}
+      \end{itemize}
+
+    \resumeProjectHeading
+      {Dr. Adeesha Wijayasiri}{Senior Lecturer}
+      \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
+        \resumeItem{Department of Computer Science \& Engineering, University of Moratuwa}
+        \resumeItem{\href{mailto:adeeshaw@cse.mrt.ac.lk}{\underline{adeeshaw@cse.mrt.ac.lk}}}
+      \end{itemize}
+\end{itemize}
+
+\end{document}
