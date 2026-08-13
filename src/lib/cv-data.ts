@@ -108,6 +108,15 @@ export const projects: Entry[] = [
     ],
   },
   {
+    title: "Physics-Informed GNNs for Multi-Horizon Disease Forecasting",
+    meta: "Ongoing",
+    bullets: [
+      "Tech: PyTorch Geometric, Spatio-Temporal GNNs (GCN/GAT), GANs.",
+      "Building a spatio-temporal Graph Neural Network baseline to forecast weekly, district-level dengue incidence across Sri Lanka.",
+      "Enhancing the baseline model by integrating an epidemic-mechanistic (SEIR-SEI) physics-informed loss function, conditional GAN-based data augmentation to counter scarcity, and a learned adaptive graph to capture unobserved inter-district transmission dynamics.",
+    ],
+  },
+  {
     title: "Smart Waste Management System",
     meta: "2026",
     links: [
