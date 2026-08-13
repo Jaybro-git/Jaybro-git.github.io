@@ -132,7 +132,7 @@ export const projects: Entry[] = [
       "Tech: FastAPI, Next.js, SQLAlchemy, MySQL, XGBoost, OR-Tools, LangGraph, LangSmith, Chroma, Gemini, Sentence-Transformers.",
       "Planners previously tracked pharmaceutical distribution across spreadsheets, juggling DC replenishment speed, simultaneous vessel manifests, cold-chain constraints, lorry capacity, and day-level availability by hand. This platform folds shortage forecasting, shipment prioritization, dispatch planning, and execution tracking into one console.",
       "The core design choice: planning state never directly mutates physical stock. Approvals create scoped reservations and in-transit transfers, and real inventory only changes through explicit business events, keeping the system auditable end-to-end.",
-      "Built the ML and optimization core: an XGBoost model forecasting 48-hour shortage pressure, a priority scorer for inbound manifest clearance, an OR-Tools dispatch optimizer, and a multi-agent RAG chatbot (LangGraph supervisor routing to knowledge, operations, and analytics agents over a Chroma vector store) for querying policy, live stock, forecasts, and dispatch plans conversationally.",
+      "Implemented the Machine Learning module (priority-scoring manifest clearance, XGBoost-based 48-hour shortage forecasting, OR-Tools dispatch optimization) and a multi-agent RAG chatbot (LangGraph supervisor routing to knowledge, operations, analytics, and human-in-the-loop recommendation agents over a Chroma vector store, fully traced with LangSmith), with a CI-gated LLM-as-judge evaluation harness and a self-correction node verifying answer groundedness before response."
     ],
   },
   {
