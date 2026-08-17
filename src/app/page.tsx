@@ -29,7 +29,8 @@ export default function Home() {
           </p>
           <a
             href="/JanithM_CV.pdf"
-            download
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-4 inline-flex items-center gap-1.5 text-xs font-medium uppercase tracking-wide text-accent underline decoration-accent/30 underline-offset-4 transition-colors duration-200 hover:text-ink hover:decoration-ink"
           >
             <svg
@@ -47,7 +48,7 @@ export default function Home() {
                 strokeLinejoin="round"
               />
             </svg>
-            Download CV
+            View CV
           </a>
         </section>
 
