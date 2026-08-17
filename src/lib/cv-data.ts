@@ -110,7 +110,7 @@ export const projects: Entry[] = [
   {
     title: "Physics-Informed GNNs for Multi-Horizon Disease Forecasting",
     meta: "Ongoing",
-    links: [{ label: "GitHub", href: "https://github.com/rathishTharusha/dengue-forecasting-gnn" }],
+    // links: [{ label: "GitHub", href: "https://github.com/rathishTharusha/dengue-forecasting-gnn" }],
     bullets: [
       "Tech: PyTorch Geometric, Spatio-Temporal GNNs (GCN/GAT), GANs.",
       "Building a spatio-temporal Graph Neural Network baseline to forecast weekly, district-level dengue incidence across Sri Lanka.",
