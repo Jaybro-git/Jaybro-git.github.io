@@ -13,6 +13,20 @@ body {
   background-color: #FBF3E7;
   color: #241C14;
   overflow-x: clip;
+  position: relative;
+  isolation: isolate;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: url("/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.15;
 }
 
 ::selection {
