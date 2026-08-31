@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Hero from "@/components/Hero";
 import Nav from "@/components/Nav";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -117,7 +118,10 @@ export default function Home() {
 
         <footer className="border-t border-hairline py-10">
           <p className="text-xs text-ink-tertiary">
-            {person.name} · Portfolio
+            {person.name} ·{" "}
+            <Link href="/somemore" className="text-inherit no-underline">
+              Portfolio
+            </Link>
           </p>
         </footer>
       </main>
