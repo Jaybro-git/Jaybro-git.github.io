@@ -1,14 +1,26 @@
 import Link from "next/link";
+import localFont from "next/font/local";
+
+const modernline = localFont({
+  src: "../fonts/modernline-personal-use.regular.otf",
+});
 
 export default function SomeMore() {
   return (
-    <main>
-      <div className="relative">
+    <main className="bg-black">
+      <div className="relative bg-black">
         <img
           src="/heroBackground.jpeg"
           alt=""
           className="block h-screen w-full object-cover object-top"
         />
+        <div className="pointer-events-none absolute inset-x-0 top-3/4 flex -translate-y-1/2 items-center justify-center">
+          <span
+            className={`${modernline.className} inline-block origin-center scale-x-150 text-7xl text-white`}
+          >
+            Jay
+          </span>
+        </div>
         <div className="absolute bottom-6 right-6 flex flex-col items-end gap-3">
           <a
             href="https://www.instagram.com/_.jay.bro._?igsi=MTkwbGF3NjE4YnlnNw%3D%3D&utm_source=qr"
@@ -54,7 +66,7 @@ export default function SomeMore() {
         <p>
           <span className="italic">shit</span> happens, stay focus, 감사합니다
         </p>
-        <p>&copy; 2026 Jay&trade; &mdash; all rights reserved</p>
+        <p>&copy; 2026 Jay&trade; - all rights reserved</p>
       </div>
     </main>
   );
