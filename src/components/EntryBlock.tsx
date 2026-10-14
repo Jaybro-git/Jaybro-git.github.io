@@ -1,4 +1,5 @@
 import type { Entry } from "@/lib/cv-data";
+import ProjectImage from "@/components/ProjectImage";
 
 export default function EntryBlock({ entry }: { entry: Entry }) {
   return (
@@ -76,6 +77,10 @@ export default function EntryBlock({ entry }: { entry: Entry }) {
           );
         })}
       </ul>
+
+      {entry.image && (
+        <ProjectImage src={entry.image.src} alt={entry.image.alt} />
+      )}
     </div>
   );
 }

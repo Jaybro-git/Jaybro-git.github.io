@@ -10,6 +10,7 @@ export type Entry = {
   subtitle?: string;
   subtitleRight?: string;
   links?: Link[];
+  image?: { src: string; alt: string };
   bullets: BulletItem[];
 };
 
@@ -104,6 +105,10 @@ export const projects: Entry[] = [
       { label: "GitHub", href: "https://github.com/ECHO-Lit/ECHO-LIT" },
       { label: "Link", href: "https://audiolens-xi.vercel.app/" },
     ],
+    image: {
+      src: "/projects/audiolens.jpg",
+      alt: "AudioLens explainer: tracing a speech model's wrong prediction back to the audio that caused it",
+    },
     bullets: [
       "Tech: Next.js, FastAPI, Celery, Redis, Docker, PyTorch, Hugging Face Transformers.",
       "An interpretability workbench for speech models (Whisper, Wav2Vec2) that fills a gap general tools like Google's Learning Interpretability Tool leave for audio: saliency and attention-based attribution, layer-wise representation probing, Jacobian-based sensitivity analysis, perturbation-driven robustness testing, Whisper hallucination detection, and accent/language fairness analysis.",
@@ -126,6 +131,10 @@ export const projects: Entry[] = [
     links: [
       { label: "GitHub", href: "https://github.com/UOM-CSE-Sem4-GroupF" },
     ],
+    image: {
+      src: "/projects/smart-waste-management.jpg",
+      alt: "Smart Waste Management System architecture, from bin sensors to the driver app",
+    },
     bullets: [
       "Tech: GitOps via ArgoCD, Kafka/EMQX event streaming, Kong API gateway, Keycloak/Vault identity & secrets, Prometheus/Grafana monitoring, Hyperledger Fabric ledger for tamper-proof records.",
       "An IoT-to-insight pipeline for municipal waste collection: bin-level sensors feed an edge layer for local processing, sensor data streams through Kafka/EMQX into a GitOps-deployed platform, and a Hyperledger Fabric ledger keeps collection records tamper-proof for audit, across four repos spanning edge, IoT firmware, mobile, and a routing simulator.",
@@ -141,6 +150,10 @@ export const projects: Entry[] = [
         href: "https://github.com/JPabasara/pharma-availability-control-tower",
       },
     ],
+    image: {
+      src: "/projects/pharma-control-tower.jpg",
+      alt: "Pharma Control Tower planning flow and multi-agent RAG assistant architecture",
+    },
     bullets: [
       "Tech: FastAPI, Next.js, SQLAlchemy, MySQL, XGBoost, OR-Tools, LangGraph, LangSmith, Chroma, Gemini, Sentence-Transformers.",
       "Planners previously tracked pharmaceutical distribution across spreadsheets, juggling DC replenishment speed, simultaneous vessel manifests, cold-chain constraints, lorry capacity, and day-level availability by hand. This platform folds shortage forecasting, shipment prioritization, dispatch planning, and execution tracking into one console.",
@@ -152,6 +165,10 @@ export const projects: Entry[] = [
     title: "RPAL Interpreter",
     meta: "2026",
     links: [{ label: "GitHub", href: "https://github.com/Jaybro-git/RPAL" }],
+    image: {
+      src: "/projects/rpal-interpreter.jpg",
+      alt: "RPAL Interpreter pipeline: lexer, parser, standardizer and CSE machine",
+    },
     bullets: [
       "Tech: Java.",
       "A from-scratch interpreter for RPAL, a lazy functional language, built without lex/yacc or any parser generator: a hand-written lexer, a recursive-descent parser producing an AST, a standardizer that rewrites language constructs down to lambda-calculus primitives, and a Control/Stack/Environment machine that evaluates the result.",
@@ -167,6 +184,10 @@ export const projects: Entry[] = [
         href: "https://github.com/Jaybro-git/Banking-Management-System.git",
       },
     ],
+    image: {
+      src: "/projects/banking-management-system.jpg",
+      alt: "Banking Management System overview: branches, savings accounts, fixed deposits and banking rules",
+    },
     bullets: [
       "Tech: Next.js, Express.js, Neon Postgres, Docker.",
       "A digital core-banking platform modeled on a Sri Lankan microfinance bank serving rural communities: customer onboarding and agent assignment across branches, tiered-interest savings accounts, fixed deposits across 6-month, 1-year, and 3-year terms, joint accounts, and monthly interest auto-crediting with full transaction audit trails.",
@@ -182,6 +203,10 @@ export const projects: Entry[] = [
         href: "https://github.com/Jaybro-git/Nanoprocessor.git",
       },
     ],
+    image: {
+      src: "/projects/nanoprocessor.jpg",
+      alt: "Nanoprocessor block diagram and its three design iterations",
+    },
     bullets: [
       "Tech: VHDL, Xilinx Vivado, FPGA.",
       "Designed a processor from the gate level up in VHDL, an ALU, register bank, and instruction decoder, iterated across three passes: a basic 4-bit build, an optimized revision, then an extended 12-bit version, rather than a single one-shot design.",
