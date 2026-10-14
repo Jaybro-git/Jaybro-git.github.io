@@ -4,7 +4,7 @@
 \usepackage{titlesec}
 \usepackage{hyperref}
 \usepackage{xcolor}
-
+\usepackage{multicol}
 % Formatting sections
 \titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\titlerule]
 \titlespacing*{\section}{0pt}{1.5ex plus 1ex minus .2ex}{1ex plus .2ex}
@@ -29,7 +29,8 @@
 
 \begin{center}
     \textbf{\Huge Janith Chathuranga Mahanama} \\ \vspace{5pt}
-    \small +94 767060599 $|$ \href{mailto:janithm.23@cse.mrt.ac.lk}{\underline{janithm.23@cse.mrt.ac.lk}} $|$ \href{https://github.com/Jaybro-git}{\underline{GitHub}} $|$ \href{https://www.linkedin.com/in/janith-mahanama-5b01aa315}{\underline{LinkedIn}}
+    \small +94 767060599 $|$ \href{mailto:janithm.23@cse.mrt.ac.lk}{\underline{janithm.23@cse.mrt.ac.lk}} $|$ \href{https://github.com/Jaybro-git}{\underline{GitHub}} $|$ \href{https://www.linkedin.com/in/janith-mahanama-5b01aa315}{\underline{LinkedIn}} $|$
+    \href{https://janithm.me/}{\underline{janithm.me}}
 \end{center}
 
 \section{Education}
@@ -39,7 +40,7 @@
       {University of Moratuwa}{2024 -- Present}
       {B.Sc Engineering (Hons) Computer Science and Engineering}{Moratuwa, Sri Lanka}
       \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
-        \resumeItem{\textbf{CGPA:} 3.95 / 4.00}
+        \resumeItem{\textbf{CGPA: 3.95/4.00}}
         \resumeItem{\textbf{Stream:} Data Science and Engineering}
         \resumeItem{\textbf{Dean's List:} SGPA - Semester 1: 4.00 $|$ Semester 2: 4.00 $|$ Semester 3: 3.92 $|$ Semester 4: 3.91}
       \end{itemize}
@@ -57,68 +58,82 @@
       
 \end{itemize}
 
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+        \textbf{Languages}{: Python, Java, C++, JavaScript, TypeScript, SQL} \\
+        \textbf{AI \& Machine Learning}{: PyTorch, Explainable AI, Time series, LangGraph, LangSmith, Multi Agentic AI, Spatio-Temporal GNNs (GCN/GAT)} \\
+        \textbf{Web Development \& SaaS}{: Next.js, React, FastAPI, Express.js, Node.js} \\
+        \textbf{Cloud, DevOps \& Infra}{: Docker, Kubernetes, Helm, Argo CD, GitHub Actions, Vault, Terraform} \\
+        \textbf{Databases}{: MongoDB, PostgreSQL (Neon), MySQL, Redis, ChromaDB}
+    }}
+\end{itemize}
+
 \section{Research Experience}
 \begin{itemize}[leftmargin=0.15in, label={}]
 
     \resumeProjectHeading
-      {Predicting Post-Crisis Daily Tourist Arrivals $|$ \href{https://cdn.jsdelivr.net/gh/Jaybro-git/Research-Papers@main/Search_Intent_Effect_on_Post_Crisis_Daily_Tourist_Arrival_Prediction_for_Sri_Lanka.pdf}{\underline{Paper}}}{Accepted -- MERCon 2026}
+      {Predicting Post-Crisis Daily Tourist Arrivals $|$ \href{https://doi.org/10.1109/MERCon71835.2026.11691456}{\underline{Paper}}}{Published -- MERCon 2026}
       \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
         \resumeItem{Researched \textit{"The Effect of Search Intent Data on Predicting Post-Crisis Daily Tourist Arrivals in Sri Lanka"}, building a multi-model forecasting framework (SARIMA, SARIMAX, XGBoost, Random Forest, LSTM, SVR, Sequential Hybrid) that integrates official arrivals with Yandex search queries, Google Trends, exchange rates, and weather data. Benchmarked forecasting architectures and conducted feature engineering and explainability analysis, achieving a rolling MAPE of 8.94\% with an RBF-SVM model.}
       \end{itemize}
 
     \resumeProjectHeading
-      {Feature Selection Research (NIPS 2003) $|$ \href{https://github.com/Jaybro-git/Feature-Selection-Research-NIPS-2003}{\underline{GitHub}} $|$ \href{https://cdn.jsdelivr.net/gh/Jaybro-git/Research-Papers@main/Feature_Selection_for_High_Dimensional_Noisy_Data_Research_Paper.pdf}{\underline{Paper}}}{Not Published}
+      {Feature Selection Research (NIPS 2003) $|$ \href{https://github.com/Jaybro-git/Feature-Selection-Research-NIPS-2003}{\underline{GitHub}} $|$ \href{https://cdn.jsdelivr.net/gh/Jaybro-git/Research-Papers@main/Feature_Selection_for_High_Dimensional_Noisy_Data_Research_Paper.pdf}{\underline{Paper}}}{Not Published -- 2026}
       \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
-        \resumeItem{Compared filter, wrapper, embedded, and hybrid feature selection methods on the high-dimensional Madelon dataset from the NIPS 2003 Feature Selection Challenge, implementing and benchmarking selection pipelines that improved balanced accuracy from 0.58 (baseline, all features) to 0.89 using a hybrid approach.}
+        \resumeItem{Compared filter, wrapper, embedded, and hybrid feature selection methods on the high-dimensional Madelon dataset, a dataset purpose-built for the NIPS 2003 challenge to punish methods that can't separate 5 informative features from 15 redundant and 480 pure-noise ones. Implemented and benchmarked selection pipelines that improved balanced accuracy from 0.58 (baseline, all features) to 0.89 using a hybrid approach.}
       \end{itemize}
 
 \end{itemize}
 \section{Projects}
 \begin{itemize}[leftmargin=0.15in, label={}]
     \resumeProjectHeading
-      {AudioLens - Explainable AI Research Workbench for Speech Models  $|$ \href{https://github.com/ECHO-Lit/ECHO-LIT}{\underline{GitHub}}}{Ongoing}
+      {AudioLens - Explainable AI Research Workbench for Speech Models  $|$ \href{https://github.com/ECHO-Lit/ECHO-LIT}{\underline{GitHub}} $|$ \href{https://audiolens-xi.vercel.app/}{\underline{Link}}}{2026}
       \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
         \resumeItem{\textbf{Tech Stack:} Next.js, FastAPI, Celery, Redis, Docker, PyTorch, Hugging Face Transformers.}
-        \resumeItem{A research workbench for explainable AI in speech recognition (Whisper, Wav2Vec2): saliency and attention-based attribution, perturbation-driven robustness testing, layer-wise representation probing, internal activation and Jacobian-based sensitivity analysis, Whisper hallucination detection, and linguistic-vs-acoustic influence and accent/language fairness analysis, all served through an asynchronous, containerized Celery/Redis job architecture.}
-        \resumeItem{Users/researchers can upload custom speech models and datasets to inspect the blackbox architecture end-to-end: tracing a bad prediction back to the exact audio evidence or acoustic condition that caused it.}
+        \resumeItem{Extending ECHO prototype into a research workbench for explainable AI in speech recognition (Whisper, Wav2Vec2): saliency and attention-based attribution, perturbation-driven robustness testing, layer-wise representation probing, internal activation and Jacobian-based sensitivity analysis, Whisper hallucination detection, and linguistic-vs-acoustic influence and accent/language fairness analysis.}
+        \resumeItem{Users/researchers can upload custom speech models and datasets to inspect the blackbox architecture end-to-end: tracing a bad prediction back to the exact audio evidence or acoustic condition that caused it. Heavy analysis jobs run asynchronously through a Celery/Redis queue behind a FastAPI control plane, decoupled from the Next.js frontend so long-running inference never blocks the UI, with multi-GPU support (CUDA, ROCm, Metal) across whatever hardware a researcher has.}
+      \end{itemize}
+    \resumeProjectHeading
+      {Physics-Informed GNNs for Multi-Horizon Disease Forecasting}{Ongoing}
+      \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
+        \resumeItem{\textbf{Tech Stack:} PyTorch Geometric, Spatio-Temporal GNNs (GCN/GAT), GANs.}
+        \resumeItem{Building a spatio-temporal Graph Neural Network baseline to forecast weekly, district-level dengue incidence across Sri Lanka.}
+        \resumeItem{Enhancing the baseline model by integrating an epidemic-mechanistic (SEIR-SEI) physics-informed loss function, conditional GAN-based data augmentation to counter scarcity, and a learned adaptive graph to capture unobserved inter-district transmission dynamics.}
       \end{itemize}
     \resumeProjectHeading
       {Smart Waste Management System  $|$ \href{https://github.com/UOM-CSE-Sem4-GroupF}{\underline{GitHub}}}{2026}
       \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
         \resumeItem{\textbf{Tech Stack:} GitOps deployment via ArgoCD, Kafka/EMQX event streaming, Kong API gateway, Keycloak/Vault-based identity and secrets management, Prometheus and Grafana for monitoring, and a Hyperledger Fabric ledger for tamper-proof collection records.}
         \resumeItem{An IoT-integrated platform to monitor real-time waste levels and optimize collection routes across edge, IoT, mobile, and analytics components.}
-        \resumeItem{Worked in the DevOps and Platform Infrastructure team.}
+        \resumeItem{Worked in the DevOps and Platform Infrastructure team. Architected the CI/CD deployment pipelines, established comprehensive unit/component/integration/system testing suites, and integrated core security features for robust data protection.}
       \end{itemize}
     \resumeProjectHeading
       {Pharma Availability Control Tower  $|$ \href{https://github.com/JPabasara/pharma-availability-control-tower}{\underline{GitHub}}}{2026}
       \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
         \resumeItem{\textbf{Tech Stack:} FastAPI, Next.js, SQLAlchemy, MySQL, XGBoost, OR-Tools, LangGraph, LangSmith, Chroma, Gemini, Sentence-Transformers.}
         \resumeItem{A pharmaceutical distribution planning platform consolidating shortage forecasting, shipment prioritization, dispatch planning, and execution tracking into a single planner workflow.}
-        \resumeItem{Implemented the Machine Learning module (a priority-scoring model for inbound manifest clearance, an XGBoost-based 48-hour shortage forecasting model, and an OR-Tools dispatch optimization engine) and a multi-agent RAG chatbot (LangGraph supervisor routing to knowledge, operations, and analytics agents over a Chroma vector store) for conversational querying of policies, live stock, forecasts, and dispatch plans.}
+        \resumeItem{Implemented the Machine Learning module (priority-scoring manifest clearance, XGBoost-based 48-hour shortage forecasting, OR-Tools dispatch optimization) and a multi-agent RAG chatbot (LangGraph supervisor routing to knowledge, operations, analytics, and human-in-the-loop recommendation agents over a Chroma vector store, fully traced with LangSmith), with a CI-gated LLM-as-judge evaluation harness and a self-correction node verifying answer groundedness before response.}
       \end{itemize}
     \resumeProjectHeading
       {RPAL Interpreter  $|$ \href{https://github.com/Jaybro-git/RPAL}{\underline{GitHub}}}{2026}
       \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
         \resumeItem{\textbf{Tech Stack:} Java.}
-        \resumeItem{Built a complete interpreter for RPAL, a functional programming language, implementing lexing, recursive-descent parsing, AST standardization, and evaluation via a Control/Stack/Environment (CSE) machine, without external lexer/parser generators, supporting closures, recursion, tuples, and built-in operators.}
+        \resumeItem{Built a complete interpreter for RPAL, a lazy functional language, without lex/yacc or any parser generator: a hand written lexer, a recursive-descent parser producing an AST, a standardizer that rewrites language constructs down to lambda-calculus primitives, and a Control/Stack/Environment machine that evaluates the result.}
+        \resumeItem{Recursion is call by value through a Y star-style fixed point combinator that wraps functions in eta closures so they can reference themselves. The runtime handles closures, tuples, and 14 built-in operators end-to-end, verified against 17 test programs from Fibonacci to simultaneous bindings.}
       \end{itemize}
     \resumeProjectHeading
       {Banking Management System  $|$ \href{https://github.com/Jaybro-git/Banking-Management-System.git}{\underline{GitHub}}}{2025}
       \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
         \resumeItem{\textbf{Tech Stack:} Next.js, Express.js, Neon Postgres, Docker.}
-        \resumeItem{A digital banking platform for a microfinance institution, supporting savings accounts, fixed deposits, automated interest accrual, and real-time transaction processing across multiple account tiers.}
+        \resumeItem{A digital core-banking platform modeled on a Sri Lankan microfinance bank serving rural communities: customer onboarding and agent assignment across branches, tiered-interest savings accounts, fixed deposits across 6-month, 1-year, and 3-year terms, joint accounts, and monthly interest auto-crediting with full transaction audit trails.} 
+        \resumeItem{Enforces real banking constraints: minimum balances, no overdrafts, one fixed deposit per savings account, and role-based access separating customers, agents, and branch managers.}
         \resumeItem{Contributed to full-stack development and CI/CD workflow automating build verification and unit testing.}
-      \end{itemize}
-      \resumeProjectHeading
-      {12-bit Nanoprocessor  $|$ \href{https://github.com/Jaybro-git/Nanoprocessor.git}{\underline{GitHub}}}{2025}
-      \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
-        \resumeItem{\textbf{Tech Stack:} VHDL, Xilinx Vivado, FPGA.}
-        \resumeItem{Designed a custom 12-bit nanoprocessor architecture featuring an Arithmetic Logic Unit (ALU), register bank, and instruction decoder, verifying system functionality through simulation and hardware synthesis.}
       \end{itemize}
 \end{itemize}
 
 \section{Competitions}
-\begin{itemize}[leftmargin=0.15in, label={}]
+\begin{itemize}[leftmargin=0.15in, label={}, itemsep=0pt, topsep=2pt]
     \resumeProjectHeading
       {AITHON 2026 by Hemas Holdings PLC}{2026}
       \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
@@ -151,32 +166,34 @@
 \end{itemize}
 
 \section{Certifications}
-\begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
+\begin{multicols}{2}
+\begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}, itemsep=2pt, topsep=2pt]
     \resumeItem{\textbf{AWS Academy Graduate} -- Cloud Foundations}
-    \resumeItem{\textbf{AWS Academy Graduate} -- Microservices and CI/CD Pipeline Builder}
-    \resumeItem{\textbf{Machine Learning Specialization} -- Coursera [Ongoing]}
-    \resumeItem{\textbf{Python Programming Online Course} -- University of Moratuwa}
-    \resumeItem{\textbf{Web Development Online Course} -- University of Moratuwa}
-    \resumeItem{\textbf{Level 3 Certificate in Information Technology} -- School of Computing, Esoft Metro Campus}
+    \resumeItem{\textbf{AWS Academy Graduate} -- Microservices \& CI/CD}
+    \resumeItem{\textbf{ML Specialization} -- Coursera [Ongoing]}
+    \resumeItem{\textbf{Python Programming} -- University of Moratuwa}
+    \resumeItem{\textbf{Web Development} -- University of Moratuwa}
+    \resumeItem{\textbf{Level 3 CIT Certificate} -- Esoft Metro Campus}
 \end{itemize}
+\end{multicols}
 
 \section{Experience \& Extracurriculars}
-\begin{itemize}[leftmargin=0.15in, label={}]
+\begin{itemize}[leftmargin=0.15in, label={}, itemsep=0pt, topsep=2pt]
     \resumeProjectHeading
       {University of Moratuwa}{2024 -- Present}
-      \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
-        \resumeItem{Member of IEEE Student Branch and IESL.}
-        \resumeItem{Member of Strategic Events Committee, Computer Science \& Engineering Student Society.}
-        \resumeItem{Member of Publicity Committee for SLIoT 2026.}
+      \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}, itemsep=0pt, topsep=1pt]
+        \resumeItem{Member, IEEE Student Branch and IESL.}
+        \resumeItem{Strategic Events Committee, CSE Student Society.}
+        \resumeItem{Publicity Committee, SLIoT 2026.}
       \end{itemize}
 
     \resumeProjectHeading
       {Trinity College Kandy}{2009 -- 2023}
-      \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
-        \resumeItem{Teaching Assistant for Advanced Level Section (2023).}
+      \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}, itemsep=0pt, topsep=1pt]
+        \resumeItem{Teaching Assistant, Advanced Level Section (2023).}
         \resumeItem{Committee Member: Social Service Union (2019), Science Society (2015, 2017).}
-        \resumeItem{Member: Astronomical Society, Automotive Club, Design Club.}
-        \resumeItem{Member of the School Hockey Team (2013-2014, 2016-2017).}
+        \resumeItem{Member: Astronomical Society, Automotive Club, Design Club}
+        \resumeItem{School Hockey Team (2013-2014, 2016-2017).}
       \end{itemize}
 \end{itemize}
 

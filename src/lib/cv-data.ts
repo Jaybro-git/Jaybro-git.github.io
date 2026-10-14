@@ -64,11 +64,11 @@ export const education: Entry[] = [
 export const research: Entry[] = [
   {
     title: "Predicting Post-Crisis Daily Tourist Arrivals",
-    meta: "Accepted, MERCon 2026",
+    meta: "Published, MERCon 2026",
     links: [
       {
         label: "Paper",
-        href: "https://cdn.jsdelivr.net/gh/Jaybro-git/Research-Papers@main/Search_Intent_Effect_on_Post_Crisis_Daily_Tourist_Arrival_Prediction_for_Sri_Lanka.pdf",
+        href: "https://doi.org/10.1109/MERCon71835.2026.11691456",
       },
     ],
     bullets: [
@@ -99,8 +99,11 @@ export const research: Entry[] = [
 export const projects: Entry[] = [
   {
     title: "AudioLens, Explainable AI Research Workbench for Speech Models",
-    meta: "Ongoing",
-    links: [{ label: "GitHub", href: "https://github.com/ECHO-Lit/ECHO-LIT" }],
+    meta: "2026",
+    links: [
+      { label: "GitHub", href: "https://github.com/ECHO-Lit/ECHO-LIT" },
+      { label: "Link", href: "https://audiolens-xi.vercel.app/" },
+    ],
     bullets: [
       "Tech: Next.js, FastAPI, Celery, Redis, Docker, PyTorch, Hugging Face Transformers.",
       "An interpretability workbench for speech models (Whisper, Wav2Vec2) that fills a gap general tools like Google's Learning Interpretability Tool leave for audio: saliency and attention-based attribution, layer-wise representation probing, Jacobian-based sensitivity analysis, perturbation-driven robustness testing, Whisper hallucination detection, and accent/language fairness analysis.",
