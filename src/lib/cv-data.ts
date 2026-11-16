@@ -116,6 +116,26 @@ export const projects: Entry[] = [
     ],
   },
   {
+    title: "Earth Jukebox, Sonifying Earth Observation Data",
+    meta: "2026",
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/Jaybro-git/nasa-space-apps-jukebox",
+      },
+      { label: "Link", href: "https://nasa-space-apps-jukebox.vercel.app/" },
+    ],
+    image: {
+      src: "/projects/nasa-space-apps-jukebox.jpg",
+      alt: "NASA Space Apps Jukebox: turning Earth observation visualizations into explorable audio",
+    },
+    bullets: [
+      "Tech: Next.js, TypeScript, Three.js, Tone.js, Python (FFmpeg, OpenCV, NumPy), Fish Audio API, Vercel.",
+      "Built for NASA Space Apps Challenge: a web app that sonifies Earth observation data, ocean temperatures, night lights, lightning detection, aerosol patterns, into audio, designed primarily for blind and low-vision listeners. One soft note per data sample keeps a steady pulse as the data's own clock, with silence meaning no data.",
+      "A Python pipeline converts NASA SVS, NOAA ETOPO1, MODIS, and Natural Earth datasets into frozen frames explorable through Point, Row, Column, and Box tools on an interactive 3D globe, with keyboard and voice navigation, adjustable playback speed and mood, and Tone.js synthesis over sampled instruments.",
+    ],
+  },
+  {
     title: "Physics-Informed GNNs for Multi-Horizon Disease Forecasting",
     meta: "Ongoing",
     // links: [{ label: "GitHub", href: "https://github.com/rathishTharusha/dengue-forecasting-gnn" }],
@@ -216,6 +236,12 @@ export const projects: Entry[] = [
 ];
 
 export const competitions: Entry[] = [
+  {
+    title:
+      "Tourism Start-Up Competition 2026, by Sri Lanka Tourism Development Authority (SLTDA)",
+    meta: "2026",
+    bullets: ["Winner, Tertiary Category."],
+  },
   {
     title: "AITHON 2026 by Hemas Holdings PLC",
     meta: "2026",

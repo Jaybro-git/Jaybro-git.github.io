@@ -91,49 +91,54 @@
       {AudioLens - Explainable AI Research Workbench for Speech Models  $|$ \href{https://github.com/ECHO-Lit/ECHO-LIT}{\underline{GitHub}} $|$ \href{https://audiolens-xi.vercel.app/}{\underline{Link}}}{2026}
       \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
         \resumeItem{\textbf{Tech Stack:} Next.js, FastAPI, Celery, Redis, Docker, PyTorch, Hugging Face Transformers.}
-        \resumeItem{Extending ECHO prototype into a research workbench for explainable AI in speech recognition (Whisper, Wav2Vec2): saliency and attention-based attribution, perturbation-driven robustness testing, layer-wise representation probing, internal activation and Jacobian-based sensitivity analysis, Whisper hallucination detection, and linguistic-vs-acoustic influence and accent/language fairness analysis.}
-        \resumeItem{Users/researchers can upload custom speech models and datasets to inspect the blackbox architecture end-to-end: tracing a bad prediction back to the exact audio evidence or acoustic condition that caused it. Heavy analysis jobs run asynchronously through a Celery/Redis queue behind a FastAPI control plane, decoupled from the Next.js frontend so long-running inference never blocks the UI, with multi-GPU support (CUDA, ROCm, Metal) across whatever hardware a researcher has.}
+        \resumeItem{Built an explainable-AI workbench for speech models (Whisper, Wav2Vec2): saliency/attention attribution, Jacobian-based sensitivity analysis, hallucination detection, and accent/language fairness testing.}
+        \resumeItem{Enabled researchers to trace mispredictions to source audio via an async Celery/Redis queue behind FastAPI, decoupled from the Next.js UI, with multi-GPU (CUDA/ROCm/Metal) support.}
       \end{itemize}
     \resumeProjectHeading
       {Physics-Informed GNNs for Multi-Horizon Disease Forecasting}{Ongoing}
       \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
         \resumeItem{\textbf{Tech Stack:} PyTorch Geometric, Spatio-Temporal GNNs (GCN/GAT), GANs.}
-        \resumeItem{Building a spatio-temporal Graph Neural Network baseline to forecast weekly, district-level dengue incidence across Sri Lanka.}
-        \resumeItem{Enhancing the baseline model by integrating an epidemic-mechanistic (SEIR-SEI) physics-informed loss function, conditional GAN-based data augmentation to counter scarcity, and a learned adaptive graph to capture unobserved inter-district transmission dynamics.}
+        \resumeItem{Developing a spatio-temporal GNN baseline to forecast weekly, district-level dengue incidence across Sri Lanka.}
+        \resumeItem{Enhancing it with a SEIR-SEI physics-informed loss, GAN-based data augmentation, and a learned adaptive graph for inter-district transmission dynamics.}
       \end{itemize}
     \resumeProjectHeading
       {Smart Waste Management System  $|$ \href{https://github.com/UOM-CSE-Sem4-GroupF}{\underline{GitHub}}}{2026}
       \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
-        \resumeItem{\textbf{Tech Stack:} GitOps deployment via ArgoCD, Kafka/EMQX event streaming, Kong API gateway, Keycloak/Vault-based identity and secrets management, Prometheus and Grafana for monitoring, and a Hyperledger Fabric ledger for tamper-proof collection records.}
-        \resumeItem{An IoT-integrated platform to monitor real-time waste levels and optimize collection routes across edge, IoT, mobile, and analytics components.}
-        \resumeItem{Worked in the DevOps and Platform Infrastructure team. Architected the CI/CD deployment pipelines, established comprehensive unit/component/integration/system testing suites, and integrated core security features for robust data protection.}
+        \resumeItem{\textbf{Tech Stack:} ArgoCD, Kafka/EMQX, Kong, Keycloak/Vault, Prometheus/Grafana, Hyperledger Fabric.}
+        \resumeItem{Built an IoT-to-insight pipeline streaming bin sensor data via Kafka/EMQX into a GitOps-deployed platform, with a Hyperledger Fabric ledger for tamper-proof collection records.}
+        \resumeItem{Led DevOps/Platform Infrastructure: architected CI/CD pipelines, test suites, and security hardening across ArgoCD, Kong, Keycloak/Vault, and Prometheus/Grafana.}
       \end{itemize}
     \resumeProjectHeading
       {Pharma Availability Control Tower  $|$ \href{https://github.com/JPabasara/pharma-availability-control-tower}{\underline{GitHub}}}{2026}
       \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
         \resumeItem{\textbf{Tech Stack:} FastAPI, Next.js, SQLAlchemy, MySQL, XGBoost, OR-Tools, LangGraph, LangSmith, Chroma, Gemini, Sentence-Transformers.}
-        \resumeItem{A pharmaceutical distribution planning platform consolidating shortage forecasting, shipment prioritization, dispatch planning, and execution tracking into a single planner workflow.}
-        \resumeItem{Implemented the Machine Learning module (priority-scoring manifest clearance, XGBoost-based 48-hour shortage forecasting, OR-Tools dispatch optimization) and a multi-agent RAG chatbot (LangGraph supervisor routing to knowledge, operations, analytics, and human-in-the-loop recommendation agents over a Chroma vector store, fully traced with LangSmith), with a CI-gated LLM-as-judge evaluation harness and a self-correction node verifying answer groundedness before response.}
+        \resumeItem{Built a planning platform unifying shortage forecasting, shipment prioritization, dispatch planning, and execution tracking for pharmaceutical distribution.}
+        \resumeItem{Implemented the ML module (XGBoost 48-hour shortage forecasting, OR-Tools dispatch optimization) and a multi-agent RAG chatbot (LangGraph, Chroma, LangSmith) with a CI-gated LLM-as-judge evaluation harness.}
       \end{itemize}
     \resumeProjectHeading
       {RPAL Interpreter  $|$ \href{https://github.com/Jaybro-git/RPAL}{\underline{GitHub}}}{2026}
       \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
         \resumeItem{\textbf{Tech Stack:} Java.}
-        \resumeItem{Built a complete interpreter for RPAL, a lazy functional language, without lex/yacc or any parser generator: a hand written lexer, a recursive-descent parser producing an AST, a standardizer that rewrites language constructs down to lambda-calculus primitives, and a Control/Stack/Environment machine that evaluates the result.}
-        \resumeItem{Recursion is call by value through a Y star-style fixed point combinator that wraps functions in eta closures so they can reference themselves. The runtime handles closures, tuples, and 14 built-in operators end-to-end, verified against 17 test programs from Fibonacci to simultaneous bindings.}
+        \resumeItem{Built an interpreter for RPAL, a lazy functional language, from scratch, no lex/yacc: a hand-written lexer/parser, an AST standardizer to lambda-calculus primitives, and a CSE machine evaluator.}
+        \resumeItem{Implemented call-by-value recursion via a Y*-combinator with eta closures; verified across 17 test programs covering closures, tuples, and 14 built-in operators.}
       \end{itemize}
     \resumeProjectHeading
       {Banking Management System  $|$ \href{https://github.com/Jaybro-git/Banking-Management-System.git}{\underline{GitHub}}}{2025}
       \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
         \resumeItem{\textbf{Tech Stack:} Next.js, Express.js, Neon Postgres, Docker.}
-        \resumeItem{A digital core-banking platform modeled on a Sri Lankan microfinance bank serving rural communities: customer onboarding and agent assignment across branches, tiered-interest savings accounts, fixed deposits across 6-month, 1-year, and 3-year terms, joint accounts, and monthly interest auto-crediting with full transaction audit trails.} 
-        \resumeItem{Enforces real banking constraints: minimum balances, no overdrafts, one fixed deposit per savings account, and role-based access separating customers, agents, and branch managers.}
-        \resumeItem{Contributed to full-stack development and CI/CD workflow automating build verification and unit testing.}
+        \resumeItem{Built a core-banking platform modeled on a Sri Lankan microfinance bank: tiered savings accounts, fixed deposits, joint accounts, and automated interest crediting with full audit trails.}
+        \resumeItem{Enforced real banking constraints (balance limits, overdraft prevention, role-based access) and contributed to a CI/CD pipeline automating build and unit testing.}
       \end{itemize}
 \end{itemize}
 
 \section{Competitions}
 \begin{itemize}[leftmargin=0.15in, label={}, itemsep=0pt, topsep=2pt]
+    \resumeProjectHeading
+      {Tourism Start-Up Competition 2026, by Srilanka Tourism Authority (SLTDA)}{2026}
+      \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
+        \resumeItem{\textbf{Winner, Tertiary Category}.}
+      \end{itemize}
+
     \resumeProjectHeading
       {AITHON 2026 by Hemas Holdings PLC}{2026}
       \begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
