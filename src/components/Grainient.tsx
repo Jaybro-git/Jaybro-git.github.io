@@ -51,8 +51,11 @@ void main() {
   // keep the top-left (where text sits) deeper for contrast
   col *= mix(0.72, 1.0, smoothstep(0.0, 1.1, uv.x * 0.7 + (1.0 - uv.y) * 0.6));
 
-  float g = hash(gl_FragCoord.xy + fract(uTime * 7.0)) - 0.5;
-  col += g * 0.09;
+  // sine-free hash for the grain: no GPU precision patterns at large coords
+  vec3 p3 = fract(vec3(gl_FragCoord.xy + fract(uTime * 7.0) * vec2(37.0, 17.0), 0.0).xyx * 0.1031);
+  p3 += dot(p3, p3.yzx + 33.33);
+  float g = fract((p3.x + p3.y) * p3.z) - 0.5;
+  col += g * 0.11;
   gl_FragColor = vec4(col, 1.0);
 }
 `;
@@ -116,9 +119,10 @@ export default function Grainient({
     };
 
     const resize = () => {
-      const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
-      canvas.width = Math.max(1, Math.round(canvas.clientWidth * dpr));
-      canvas.height = Math.max(1, Math.round(canvas.clientHeight * dpr));
+      // At least 2x so 1x screens downsample smoothly instead of showing hard pixels.
+      const scale = Math.min(Math.max(window.devicePixelRatio || 1, 2), 2.5);
+      canvas.width = Math.max(1, Math.round(canvas.clientWidth * scale));
+      canvas.height = Math.max(1, Math.round(canvas.clientHeight * scale));
       gl.viewport(0, 0, canvas.width, canvas.height);
       gl.uniform2f(uRes, canvas.width, canvas.height);
       draw();

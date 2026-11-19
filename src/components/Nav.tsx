@@ -6,6 +6,30 @@ import { sections } from "@/lib/cv-data";
 export default function Nav() {
   const [active, setActive] = useState<string>(sections[0].id);
   const linkRefs = useRef<Record<string, HTMLAnchorElement | null>>({});
+  const lockRef = useRef(false);
+
+  const goTo = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    const target = document.getElementById(id);
+    if (!target) return;
+    e.preventDefault();
+
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    setActive(id);
+    history.replaceState(null, "", `#${id}`);
+
+    // Hold the highlight on the clicked section while the page scrolls past others.
+    lockRef.current = true;
+    let timer = 0;
+    const release = () => {
+      lockRef.current = false;
+      window.clearTimeout(timer);
+      window.removeEventListener("scrollend", release);
+    };
+    window.addEventListener("scrollend", release, { once: true });
+    timer = window.setTimeout(release, 1500);
+
+    target.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" });
+  };
 
   useEffect(() => {
     const els = sections
@@ -15,6 +39,7 @@ export default function Nav() {
     let ticking = false;
     const updateActive = () => {
       ticking = false;
+      if (lockRef.current) return;
       const triggerLine = window.scrollY + 120;
 
       const atBottom =
@@ -67,6 +92,7 @@ export default function Nav() {
               linkRefs.current[s.id] = el;
             }}
             href={`#${s.id}`}
+            onClick={(e) => goTo(e, s.id)}
             className={`shrink-0 whitespace-nowrap rounded-full px-3 py-1.5 text-xs font-medium uppercase tracking-[0.06em] transition-colors duration-200 ${
               active === s.id
                 ? "bg-accent/10 text-accent"
