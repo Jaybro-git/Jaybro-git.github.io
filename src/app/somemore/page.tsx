@@ -10,8 +10,10 @@ export default function SomeMore() {
     <main className="bg-black">
       <div className="relative bg-black">
         <img
-          src="/heroBackground.jpeg"
+          src="/heroBackground.webp"
           alt=""
+          fetchPriority="high"
+          decoding="async"
           className="block h-screen w-full object-cover object-top"
         />
         <div className="pointer-events-none absolute inset-x-0 top-3/4 flex -translate-y-1/2 items-center justify-center">

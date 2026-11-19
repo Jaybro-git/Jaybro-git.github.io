@@ -106,7 +106,7 @@ export const projects: Entry[] = [
       { label: "Link", href: "https://audiolens-xi.vercel.app/" },
     ],
     image: {
-      src: "/projects/audiolens.jpg",
+      src: "/projects/audiolens.webp",
       alt: "AudioLens explainer: tracing a speech model's wrong prediction back to the audio that caused it",
     },
     bullets: [
@@ -126,7 +126,7 @@ export const projects: Entry[] = [
       { label: "Link", href: "https://nasa-space-apps-jukebox.vercel.app/" },
     ],
     image: {
-      src: "/projects/nasa-space-apps-jukebox.jpg",
+      src: "/projects/nasa-space-apps-jukebox.webp",
       alt: "NASA Space Apps Jukebox: turning Earth observation visualizations into explorable audio",
     },
     bullets: [
@@ -152,7 +152,7 @@ export const projects: Entry[] = [
       { label: "GitHub", href: "https://github.com/UOM-CSE-Sem4-GroupF" },
     ],
     image: {
-      src: "/projects/smart-waste-management.jpg",
+      src: "/projects/smart-waste-management.webp",
       alt: "Smart Waste Management System architecture, from bin sensors to the driver app",
     },
     bullets: [
@@ -171,7 +171,7 @@ export const projects: Entry[] = [
       },
     ],
     image: {
-      src: "/projects/pharma-control-tower.jpg",
+      src: "/projects/pharma-control-tower.webp",
       alt: "Pharma Control Tower planning flow and multi-agent RAG assistant architecture",
     },
     bullets: [
@@ -186,7 +186,7 @@ export const projects: Entry[] = [
     meta: "2026",
     links: [{ label: "GitHub", href: "https://github.com/Jaybro-git/RPAL" }],
     image: {
-      src: "/projects/rpal-interpreter.jpg",
+      src: "/projects/rpal-interpreter.webp",
       alt: "RPAL Interpreter pipeline: lexer, parser, standardizer and CSE machine",
     },
     bullets: [
@@ -205,7 +205,7 @@ export const projects: Entry[] = [
       },
     ],
     image: {
-      src: "/projects/banking-management-system.jpg",
+      src: "/projects/banking-management-system.webp",
       alt: "Banking Management System overview: branches, savings accounts, fixed deposits and banking rules",
     },
     bullets: [
@@ -224,7 +224,7 @@ export const projects: Entry[] = [
       },
     ],
     image: {
-      src: "/projects/nanoprocessor.jpg",
+      src: "/projects/nanoprocessor.webp",
       alt: "Nanoprocessor block diagram and its three design iterations",
     },
     bullets: [

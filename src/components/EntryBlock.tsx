@@ -5,7 +5,9 @@ export default function EntryBlock({ entry }: { entry: Entry }) {
   return (
     <div className="py-5">
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-        <h3 className="text-[0.95rem] font-semibold text-ink">{entry.title}</h3>
+        <h3 className="font-sans text-lg font-semibold leading-snug tracking-[-0.02em] text-ink">
+          {entry.title}
+        </h3>
         {entry.meta && (
           <span className="shrink-0 font-mono text-xs text-ink-tertiary">
             {entry.meta}
