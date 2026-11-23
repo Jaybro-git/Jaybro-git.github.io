@@ -5,9 +5,9 @@ import ScrollToTop from "@/components/ScrollToTop";
 import SectionHeading from "@/components/SectionHeading";
 import EntryBlock from "@/components/EntryBlock";
 import ProjectBento from "@/components/ProjectBento";
+import EducationCards from "@/components/EducationCards";
 import {
   about,
-  education,
   research,
   projects,
   competitions,
@@ -56,11 +56,7 @@ export default function Home() {
 
         <section id="education" className="border-t border-hairline py-14">
           <SectionHeading>Education</SectionHeading>
-          <div className="divide-y divide-hairline">
-            {education.map((e) => (
-              <EntryBlock key={e.title} entry={e} />
-            ))}
-          </div>
+          <EducationCards />
         </section>
 
         <section id="research" className="border-t border-hairline py-14">

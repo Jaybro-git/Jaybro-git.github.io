@@ -30,37 +30,39 @@ export const person = {
 
 export const about =
   "I am a third-year Computer Science and Engineering honors student at the University of Moratuwa, specializing in Data Science and Engineering. Driven by a profound interest in academic research and intelligent system design, I have maintained a rigorous academic record and am a consistent high-achiever on the Dean's List. My practical experience bridges the gap between theoretical research and scalable enterprise solutions by integrating machine learning architectures and explainable artificial intelligence with full-stack development and DevOps practices. Whether I am building robust digital platforms, advancing transparent AI methodologies, or navigating high-stakes global programming competitions, I am passionate about engineering end-to-end solutions for complex real-world challenges."
-export const education: Entry[] = [
-  {
+export type Stat = { label: string; value: string };
+
+export const education = {
+  university: {
     title: "University of Moratuwa",
-    meta: "2024 – Present",
-    subtitle: "B.Sc Engineering (Hons), Computer Science and Engineering",
-    subtitleRight: "Moratuwa, Sri Lanka",
-    bullets: [
-      { text: "CGPA: 3.95 / 4.00", emphasis: true },
-      "Stream: Data Science and Engineering",
-      {
-        text: "Dean's List (SGPA)",
-        items: [
-          "Semester 1 - 4.00",
-          "Semester 2 - 4.00",
-          "Semester 3 - 3.92",
-          "Semester 4 - 3.91",
-        ],
-      },
-    ],
+    years: "2024 – Present",
+    place: "Moratuwa, Sri Lanka",
+    degree: "B.Sc Engineering (Hons), Computer Science and Engineering",
+    stream: "Data Science and Engineering",
+    cgpa: "3.95",
+    cgpaScale: "4.00",
+    statsLabel: "Dean's List · SGPA",
+    stats: [
+      { label: "Sem 1", value: "4.00" },
+      { label: "Sem 2", value: "4.00" },
+      { label: "Sem 3", value: "3.92" },
+      { label: "Sem 4", value: "3.91" },
+    ] as Stat[],
   },
-  {
+  school: {
     title: "Trinity College Kandy",
-    meta: "2009 – 2023",
+    years: "2009 – 2023",
+    place: "Kandy, Sri Lanka",
     subtitle: "Primary and Secondary Education",
-    subtitleRight: "Kandy, Sri Lanka",
-    bullets: [
-      "GCE Advanced Level (Physical Science) 2022/23, Z-Score 2.6570 · District Rank 10 · Island Rank 106",
-      "GCE Ordinary Level 2019, 8 A's, 1 B",
-    ],
+    statsLabel: "GCE A/L 2022/23 · Physical Science",
+    stats: [
+      { label: "Z-Score", value: "2.6570" },
+      { label: "District Rank", value: "10" },
+      { label: "Island Rank", value: "106" },
+    ] as Stat[],
+    footnote: "GCE O/L 2019 · 8 A's, 1 B",
   },
-];
+};
 
 export const research: Entry[] = [
   {
