@@ -6,6 +6,7 @@ import SectionHeading from "@/components/SectionHeading";
 import EntryBlock from "@/components/EntryBlock";
 import ProjectBento from "@/components/ProjectBento";
 import EducationCards from "@/components/EducationCards";
+import ContactSection from "@/components/ContactSection";
 import {
   about,
   research,
@@ -108,6 +109,8 @@ export default function Home() {
             ))}
           </div>
         </section>
+
+        <ContactSection />
 
         <footer className="border-t border-hairline py-10">
           <p className="text-xs text-ink-tertiary">
